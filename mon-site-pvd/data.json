@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": {
+      "fr": "Votre chauffeur privé à Paris",
+      "en": "Your Private Driver in Paris"
+    },
+    "subtitle": {
+      "fr": "Transferts haut de gamme vers Disneyland, aéroports, city tours",
+      "en": "Premium transfers to Disneyland, airports, city tours"
+    },
+    "cta": {
+      "fr": "Réserver maintenant",
+      "en": "Book now"
+    }
+  },
+  "services": [
+    {
+      "icon": "🎡",
+      "title": { "fr": "Disneyland", "en": "Disneyland" },
+      "description": {
+        "fr": "Transfert direct vers Disneyland Paris depuis Paris ou l'aéroport.",
+        "en": "Direct transfer to Disneyland Paris from the city or airport."
+      }
+    },
+    {
+      "icon": "✈️",
+      "title": { "fr": "Aéroports", "en": "Airports" },
+      "description": {
+        "fr": "Transferts depuis/vers CDG, Orly, Beauvais.",
+        "en": "Transfers to/from CDG, Orly, Beauvais."
+      }
+    },
+    {
+      "icon": "🏙️",
+      "title": { "fr": "City Tour", "en": "City Tour" },
+      "description": {
+        "fr": "Découverte de Paris avec chauffeur privé.",
+        "en": "Explore Paris with a private driver."
+      }
+    },
+    {
+      "icon": "🕒",
+      "title": { "fr": "Location à l'heure", "en": "Hourly" },
+      "description": {
+        "fr": "Réservation à l'heure pour vos besoins personnalisés.",
+        "en": "Hourly reservation for your personalized needs."
+      }
+    }
+  ],
+  "contact": {
+    "phone": "+33 6 12 34 56 78",
+    "whatsapp": "+33612345678",
+    "email": "contact@parisprivatedriver.com"
+  },
+  "booking": {
+    "title": {
+      "fr": "Formulaire de réservation",
+      "en": "Booking Form"
+    },
+    "fields": {
+      "name": {
+        "fr": "Nom",
+        "en": "Name"
+      },
+      "email": {
+        "fr": "Email",
+        "en": "Email"
+      },
+      "phone": {
+        "fr": "Téléphone",
+        "en": "Phone"
+      },
+      "date": {
+        "fr": "Date",
+        "en": "Date"
+      },
+      "time": {
+        "fr": "Heure",
+        "en": "Time"
+      },
+      "service": {
+        "fr": "Service",
+        "en": "Service"
+      },
+      "message": {
+        "fr": "Message",
+        "en": "Message"
+      }
+    },
+    "buttons": {
+      "submit": {
+        "fr": "Envoyer",
+        "en": "Submit"
+      },
+      "cancel": {
+        "fr": "Annuler",
+        "en": "Cancel"
+      }
+    },
+    "selectPlaceholder": {
+      "fr": "Sélectionnez un service",
+      "en": "Select a service"
+    }
+  }
+}
