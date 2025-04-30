@@ -62,7 +62,7 @@ export default function Hero({ data, lang }) {
 
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-4xl bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-2xl grid grid-cols-1 md:grid-cols-2 gap-6 text-left relative"
+        className="w-full max-w-4xl bg-[#1b2a46]/90 p-6 md:p-10 rounded-2xl grid grid-cols-1 md:grid-cols-2 gap-6 text-left relative"
       >
         <div className="relative">
           <input
@@ -77,7 +77,7 @@ export default function Hero({ data, lang }) {
             autoComplete="off"
           />
           {showFromList && (
-            <ul className="absolute z-10 w-full mt-2 max-h-48 overflow-y-auto bg-white/10 backdrop-blur-md text-white border border-white/10 rounded-xl shadow-xl">
+            <ul className="absolute z-10 w-full mt-2 max-h-48 overflow-y-auto bg-[#1b2a46]/90 text-white border border-white/10 rounded-xl shadow-xl">
               {data.locations[lang].map((loc, index) => (
                 <li
                   key={index}
@@ -104,7 +104,7 @@ export default function Hero({ data, lang }) {
             autoComplete="off"
           />
           {showToList && (
-            <ul className="absolute z-10 w-full mt-2 max-h-48 overflow-y-auto bg-white/10 backdrop-blur-md text-white border border-white/10 rounded-xl shadow-xl">
+            <ul className="absolute z-10 w-full mt-2 max-h-48 overflow-y-auto bg-[#1b2a46]/90 text-white border border-white/10 rounded-xl shadow-xl">
               {data.locations[lang].map((loc, index) => (
                 <li
                   key={index}
@@ -146,7 +146,7 @@ export default function Hero({ data, lang }) {
             autoComplete="off"
           />
           {showTimeList && (
-            <ul className="absolute z-10 w-full mt-2 max-h-48 overflow-y-auto bg-white/10 backdrop-blur-md text-white border border-white/10 rounded-xl shadow-xl">
+            <ul className="absolute z-10 w-full mt-2 max-h-48 overflow-y-auto bg-[#1b2a46]/90 text-white border border-white/10 rounded-xl shadow-xl">
               {[...Array(36)].map((_, i) => {
                 const hour = String(Math.floor(i / 2)).padStart(2, "0");
                 const minute = i % 2 === 0 ? "00" : "30";
@@ -177,7 +177,7 @@ export default function Hero({ data, lang }) {
             className="bg-white/20 text-white px-4 py-3 rounded-xl placeholder-gray-300 w-full focus:outline-none"
           />
           {showPassengerList && (
-            <ul className="absolute z-10 w-full mt-2 max-h-48 overflow-y-auto bg-white/10 backdrop-blur-md text-white border border-white/10 rounded-xl shadow-xl">
+            <ul className="absolute z-10 w-full mt-2 max-h-48 overflow-y-auto bg-[#1b2a46]/90 text-white border border-white/10 rounded-xl shadow-xl">
               {[...Array(8)].map((_, i) => {
                 const value = i + 1;
                 return (
