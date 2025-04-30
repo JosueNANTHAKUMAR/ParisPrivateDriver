@@ -26,11 +26,11 @@
       "fr": "Paris Private Driver est un service VTC haut de gamme dédié à vous offrir un trajet d'exception. Que ce soit pour un transfert vers l'aéroport, une sortie privée ou une visite touristique, nos chauffeurs expérimentés et nos véhicules de luxe vous garantissent confort, ponctualité et discrétion. Vivez une expérience personnalisée, élégante et sécurisée à chaque déplacement.",
       "en": "Paris Private Driver is a premium VTC service dedicated to providing you with an exceptional ride. Whether it’s an airport transfer, a private outing, or a city tour, our experienced drivers and luxury vehicles ensure comfort, punctuality, and discretion. Enjoy a personalized, elegant, and secure travel experience every time."
     },
-    "image": "public/img/v-class.jpg"
+    "image": "/img/v-class.jpg"
   },
   "services": [
     {
-      "image": "public/img/CDG.jpg",
+      "image": "/img/CDG.jpg",
       "title": {
         "fr": "CDG → Disneyland Paris",
         "en": "CDG to Disneyland Paris"
@@ -41,7 +41,7 @@
       }
     },
     {
-      "image": "public/img/orly.jpg",
+      "image": "/img/orly.jpg",
       "title": {
         "fr": "Orly → Disneyland Paris",
         "en": "Orly to Disneyland Paris"
@@ -52,7 +52,7 @@
       }
     },
     {
-      "image": "public/img/GDN.jpg",
+      "image": "/img/GDN.jpg",
       "title": {
         "fr": "Gare du Nord → Disneyland Paris",
         "en": "Gare du Nord to Disneyland Paris"
@@ -63,7 +63,7 @@
       }
     },
     {
-      "image": "public/img/beauvais.jpg",
+      "image": "/img/beauvais.jpg",
       "title": {
         "fr": "Beauvais → Disneyland Paris",
         "en": "Beauvais to Disneyland Paris"
@@ -74,7 +74,7 @@
       }
     },
     {
-      "image": "public/img/disney.jpg",
+      "image": "/img/disney.jpg",
       "title": {
         "fr": "Paris & Hôtels → Disneyland Paris",
         "en": "Paris & Hotels to Disneyland Paris"
