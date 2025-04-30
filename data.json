@@ -30,7 +30,7 @@
   },
   "services": [
     {
-      "image": "public/img/disney.jpg",
+      "image": "public/img/CDG.jpg",
       "title": {
         "fr": "CDG → Disneyland Paris",
         "en": "CDG to Disneyland Paris"
@@ -41,7 +41,7 @@
       }
     },
     {
-      "image": "public/img/v-class.jpg",
+      "image": "public/img/orly.jpg",
       "title": {
         "fr": "Orly → Disneyland Paris",
         "en": "Orly to Disneyland Paris"
@@ -52,7 +52,7 @@
       }
     },
     {
-      "image": "public/img/v-class.jpg",
+      "image": "public/img/GDN.jpg",
       "title": {
         "fr": "Gare du Nord → Disneyland Paris",
         "en": "Gare du Nord to Disneyland Paris"
@@ -63,7 +63,7 @@
       }
     },
     {
-      "image": "public/img/v-class.jpg",
+      "image": "public/img/beauvais.jpg",
       "title": {
         "fr": "Beauvais → Disneyland Paris",
         "en": "Beauvais to Disneyland Paris"
@@ -74,7 +74,7 @@
       }
     },
     {
-      "image": "public/img/v-class.jpg",
+      "image": "public/img/disney.jpg",
       "title": {
         "fr": "Paris & Hôtels → Disneyland Paris",
         "en": "Paris & Hotels to Disneyland Paris"
