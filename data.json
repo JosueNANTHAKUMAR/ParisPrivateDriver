@@ -13,37 +13,75 @@
       "en": "Book now"
     }
   },
+  "about": {
+    "title": {
+      "fr": "À propos de nous",
+      "en": "About Us"
+    },
+    "subtitle": {
+      "fr": "Confort - Sécurité - Excellence",
+      "en": "Comfort - Security - Excellence"
+    },
+    "description": {
+      "fr": "Paris Private Driver est un service VTC haut de gamme dédié à vous offrir un trajet d'exception. Que ce soit pour un transfert vers l'aéroport, une sortie privée ou une visite touristique, nos chauffeurs expérimentés et nos véhicules de luxe vous garantissent confort, ponctualité et discrétion. Vivez une expérience personnalisée, élégante et sécurisée à chaque déplacement.",
+      "en": "Paris Private Driver is a premium VTC service dedicated to providing you with an exceptional ride. Whether it’s an airport transfer, a private outing, or a city tour, our experienced drivers and luxury vehicles ensure comfort, punctuality, and discretion. Enjoy a personalized, elegant, and secure travel experience every time."
+    },
+    "image": "public/img/v-class.jpg"
+  },
   "services": [
     {
-      "icon": "🎡",
-      "title": { "fr": "Disneyland", "en": "Disneyland" },
+      "image": "public/img/disney.jpg",
+      "title": {
+        "fr": "CDG → Disneyland Paris",
+        "en": "CDG to Disneyland Paris"
+      },
       "description": {
-        "fr": "Transfert direct vers Disneyland Paris depuis Paris ou l'aéroport.",
-        "en": "Direct transfer to Disneyland Paris from the city or airport."
+        "fr": "Transfert privé entre l’aéroport Charles de Gaulle et Disneyland Paris. Confort, ponctualité et service premium inclus.",
+        "en": "Private transfer between Charles de Gaulle Airport and Disneyland Paris. Comfort, punctuality, and premium service included."
       }
     },
     {
-      "icon": "✈️",
-      "title": { "fr": "Aéroports", "en": "Airports" },
+      "image": "public/img/v-class.jpg",
+      "title": {
+        "fr": "Orly → Disneyland Paris",
+        "en": "Orly to Disneyland Paris"
+      },
       "description": {
-        "fr": "Transferts depuis/vers CDG, Orly, Beauvais.",
-        "en": "Transfers to/from CDG, Orly, Beauvais."
+        "fr": "Profitez d’un trajet fluide et élégant de l’aéroport d’Orly jusqu’à Disneyland. Chauffeur dédié et véhicule haut de gamme.",
+        "en": "Enjoy a smooth and stylish ride from Orly Airport to Disneyland. Dedicated driver and high-end vehicle."
       }
     },
     {
-      "icon": "🏙️",
-      "title": { "fr": "City Tour", "en": "City Tour" },
+      "image": "public/img/v-class.jpg",
+      "title": {
+        "fr": "Gare du Nord → Disneyland Paris",
+        "en": "Gare du Nord to Disneyland Paris"
+      },
       "description": {
-        "fr": "Découverte de Paris avec chauffeur privé.",
-        "en": "Explore Paris with a private driver."
+        "fr": "Départ immédiat depuis la Gare du Nord vers la magie de Disneyland avec chauffeur privé.",
+        "en": "Depart directly from Gare du Nord to the magic of Disneyland with a private chauffeur."
       }
     },
     {
-      "icon": "🕒",
-      "title": { "fr": "Location à l'heure", "en": "Hourly" },
+      "image": "public/img/v-class.jpg",
+      "title": {
+        "fr": "Beauvais → Disneyland Paris",
+        "en": "Beauvais to Disneyland Paris"
+      },
       "description": {
-        "fr": "Réservation à l'heure pour vos besoins personnalisés.",
-        "en": "Hourly reservation for your personalized needs."
+        "fr": "Voyage direct en toute sérénité de Beauvais à Disneyland. Véhicule confortable et climatisé à votre disposition.",
+        "en": "Direct and stress-free travel from Beauvais to Disneyland. Comfortable, air-conditioned vehicle at your service."
+      }
+    },
+    {
+      "image": "public/img/v-class.jpg",
+      "title": {
+        "fr": "Paris & Hôtels → Disneyland Paris",
+        "en": "Paris & Hotels to Disneyland Paris"
+      },
+      "description": {
+        "fr": "Départ depuis votre domicile ou hôtel à Paris pour un trajet sans stress vers Disneyland Paris.",
+        "en": "Pick-up from your home or hotel in Paris for a seamless trip to Disneyland Paris."
       }
     }
   ],
