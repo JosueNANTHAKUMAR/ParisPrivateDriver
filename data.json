@@ -11,6 +11,26 @@
     "cta": {
       "fr": "Réserver maintenant",
       "en": "Book now"
+    },
+  "locations": {
+      "fr": [
+        "Aéroport Charles de Gaulle",
+        "Aéroport d'Orly",
+        "Gare du Nord",
+        "Disneyland Paris",
+        "Centre de Paris",
+        "Aéroport de Beauvais",
+        "Tour Eiffel"
+      ],
+      "en": [
+        "Charles de Gaulle Airport",
+        "Orly Airport",
+        "Gare du Nord",
+        "Disneyland Paris",
+        "Paris Center",
+        "Beauvais Airport",
+        "Eiffel Tower"
+      ]
     }
   },
   "about": {
