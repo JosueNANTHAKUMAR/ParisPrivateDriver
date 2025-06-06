@@ -11,26 +11,6 @@
     "cta": {
       "fr": "Réserver maintenant",
       "en": "Book now"
-    },
-  "locations": {
-      "fr": [
-        "Aéroport Charles de Gaulle",
-        "Aéroport d'Orly",
-        "Gare du Nord",
-        "Disneyland Paris",
-        "Centre de Paris",
-        "Aéroport de Beauvais",
-        "Tour Eiffel"
-      ],
-      "en": [
-        "Charles de Gaulle Airport",
-        "Orly Airport",
-        "Gare du Nord",
-        "Disneyland Paris",
-        "Paris Center",
-        "Beauvais Airport",
-        "Eiffel Tower"
-      ]
     }
   },
   "about": {
@@ -44,35 +24,35 @@
     },
     "description": {
       "fr": "Paris Private Driver est un service VTC haut de gamme dédié à vous offrir un trajet d'exception. Que ce soit pour un transfert vers l'aéroport, une sortie privée ou une visite touristique, nos chauffeurs expérimentés et nos véhicules de luxe vous garantissent confort, ponctualité et discrétion. Vivez une expérience personnalisée, élégante et sécurisée à chaque déplacement.",
-      "en": "Paris Private Driver is a premium VTC service dedicated to providing you with an exceptional ride. Whether it’s an airport transfer, a private outing, or a city tour, our experienced drivers and luxury vehicles ensure comfort, punctuality, and discretion. Enjoy a personalized, elegant, and secure travel experience every time."
+      "en": "Paris Private Driver is a premium VTC service dedicated to providing you with an exceptional ride. Whether it's an airport transfer, a private outing, or a city tour, our experienced drivers and luxury vehicles ensure comfort, punctuality, and discretion. Enjoy a personalized, elegant, and secure travel experience every time."
     },
-    "image": "/img/v-class.jpg"
+    "image": "/ParisPrivateDriver/img/v-class.jpg"
   },
   "services": [
     {
-      "image": "/img/CDG.jpg",
+      "image": "/ParisPrivateDriver/img/CDG.jpg",
       "title": {
         "fr": "CDG → Disneyland Paris",
         "en": "CDG to Disneyland Paris"
       },
       "description": {
-        "fr": "Transfert privé entre l’aéroport Charles de Gaulle et Disneyland Paris. Confort, ponctualité et service premium inclus.",
+        "fr": "Transfert privé entre l'aéroport Charles de Gaulle et Disneyland Paris. Confort, ponctualité et service premium inclus.",
         "en": "Private transfer between Charles de Gaulle Airport and Disneyland Paris. Comfort, punctuality, and premium service included."
       }
     },
     {
-      "image": "/img/orly.jpg",
+      "image": "/ParisPrivateDriver/img/orly.jpg",
       "title": {
         "fr": "Orly → Disneyland Paris",
         "en": "Orly to Disneyland Paris"
       },
       "description": {
-        "fr": "Profitez d’un trajet fluide et élégant de l’aéroport d’Orly jusqu’à Disneyland. Chauffeur dédié et véhicule haut de gamme.",
+        "fr": "Profitez d'un trajet fluide et élégant de l'aéroport d'Orly jusqu'à Disneyland. Chauffeur dédié et véhicule haut de gamme.",
         "en": "Enjoy a smooth and stylish ride from Orly Airport to Disneyland. Dedicated driver and high-end vehicle."
       }
     },
     {
-      "image": "/img/GDN.jpg",
+      "image": "/ParisPrivateDriver/img/GDN.jpg",
       "title": {
         "fr": "Gare du Nord → Disneyland Paris",
         "en": "Gare du Nord to Disneyland Paris"
@@ -83,7 +63,7 @@
       }
     },
     {
-      "image": "/img/beauvais.jpg",
+      "image": "/ParisPrivateDriver/img/beauvais.jpg",
       "title": {
         "fr": "Beauvais → Disneyland Paris",
         "en": "Beauvais to Disneyland Paris"
@@ -94,7 +74,7 @@
       }
     },
     {
-      "image": "/img/disney.jpg",
+      "image": "/ParisPrivateDriver/img/disney.jpg",
       "title": {
         "fr": "Paris & Hôtels → Disneyland Paris",
         "en": "Paris & Hotels to Disneyland Paris"
@@ -159,5 +139,115 @@
       "fr": "Sélectionnez un service",
       "en": "Select a service"
     }
-  }
+  },
+  "airports": [
+    {
+      "id": "cdg",
+      "icon": "plane",
+      "name": {
+        "fr": "Aéroport Charles de Gaulle",
+        "en": "Charles de Gaulle Airport"
+      }
+    },
+    {
+      "id": "ory",
+      "icon": "plane",
+      "name": {
+        "fr": "Aéroport d'Orly",
+        "en": "Orly Airport"
+      }
+    },
+    {
+      "id": "bva",
+      "icon": "plane",
+      "name": {
+        "fr": "Aéroport de Beauvais",
+        "en": "Beauvais Airport"
+      }
+    }
+  ],
+  "stations": [
+    {
+      "id": "gdn",
+      "icon": "train",
+      "name": {
+        "fr": "Gare du Nord",
+        "en": "Gare du Nord"
+      }
+    },
+    {
+      "id": "gdl",
+      "icon": "train",
+      "name": {
+        "fr": "Gare de Lyon",
+        "en": "Gare de Lyon"
+      }
+    },
+    {
+      "id": "gde",
+      "icon": "train",
+      "name": {
+        "fr": "Gare de l'Est",
+        "en": "Gare de l'Est"
+      }
+    },
+    {
+      "id": "gsa",
+      "icon": "train",
+      "name": {
+        "fr": "Gare Saint-Lazare",
+        "en": "Saint-Lazare Station"
+      }
+    },
+    {
+      "id": "gma",
+      "icon": "train",
+      "name": {
+        "fr": "Gare Montparnasse",
+        "en": "Montparnasse Station"
+      }
+    },
+    {
+      "id": "gpa",
+      "icon": "train",
+      "name": {
+        "fr": "Gare Paris Bercy",
+        "en": "Paris Bercy Station"
+      }
+    },
+    {
+      "id": "gau",
+      "icon": "train",
+      "name": {
+        "fr": "Gare d'Austerlitz",
+        "en": "Austerlitz Station"
+      }
+    }
+  ],
+  "places": [
+    {
+      "id": "disneyland",
+      "icon": "star",
+      "name": {
+        "fr": "Disneyland Paris",
+        "en": "Disneyland Paris"
+      }
+    },
+    {
+      "id": "pariscenter",
+      "icon": "city",
+      "name": {
+        "fr": "Centre de Paris",
+        "en": "Paris Center"
+      }
+    },
+    {
+      "id": "eiffel",
+      "icon": "tower",
+      "name": {
+        "fr": "Tour Eiffel",
+        "en": "Eiffel Tower"
+      }
+    }
+  ]
 }
