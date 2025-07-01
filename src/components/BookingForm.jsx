@@ -43,6 +43,17 @@ function getLocationGroups(data, lang) {
 const hourOptions = Array.from({ length: 24 }, (_, i) => (i < 10 ? `0${i}` : `${i}`));
 const minuteOptions = ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"];
 const durationOptions = Array.from({ length: 10 }, (_, i) => `${i + 1}`);
+const passengerOptions = Array.from({ length: 9 }, (_, i) => i < 8 ? `${i + 1}` : '9+');
+const vehicleOptions = [
+  { key: 'berline', label: { fr: 'Berline Affaires', en: 'Business Sedan' } },
+  { key: 'van', label: { fr: 'Van Prestige', en: 'Prestige Van' } }
+];
+
+// Images des véhicules
+const vehicleImages = {
+  berline: '/ParisPrivateDriver/img/2.png',
+  van: '/ParisPrivateDriver/img/4.png'
+};
 
 export default function BookingForm({ lang, forceOpen = false }) {
   const [isOpen, setIsOpen] = useState(forceOpen);
@@ -55,7 +66,9 @@ export default function BookingForm({ lang, forceOpen = false }) {
     minute: '',
     roundTrip: false,
     address: '',
-    duration: '1'
+    duration: '1',
+    passengers: '1',
+    vehicle: 'berline'
   });
 
   const handleSubmit = (e) => {
@@ -70,6 +83,35 @@ export default function BookingForm({ lang, forceOpen = false }) {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
+  };
+
+  const getEstimate = () => {
+    const p = parseInt(formData.passengers);
+    const v = formData.vehicle;
+    if (p >= 9) return lang === 'fr' ? 'Sur devis' : 'On request';
+    if (v === 'berline') {
+      if (p <= 2) return '80€';
+      if (p === 3) return '90€';
+      return lang === 'fr' ? 'Non disponible' : 'Not available';
+    }
+    if (v === 'van') {
+      if (p <= 3) return '90€';
+      if (p === 4) return '100€';
+      if (p <= 6) return '110€';
+      if (p <= 8) return '120€';
+      return lang === 'fr' ? 'Sur devis' : 'On request';
+    }
+    return '-';
+  };
+
+  // Si plus de 3 passagers, passe automatiquement à van
+  const handlePassengersChange = (e) => {
+    const value = e.target.value;
+    setFormData(prev => {
+      let newVehicle = prev.vehicle;
+      if (parseInt(value) > 3) newVehicle = 'van';
+      return { ...prev, passengers: value, vehicle: newVehicle };
+    });
   };
 
   return (
@@ -234,13 +276,89 @@ export default function BookingForm({ lang, forceOpen = false }) {
             {lang === 'fr' ? 'Aller/retour' : 'Round trip'}
           </label>
         </div>
+        <div className="flex flex-col items-center mb-2">
+          <img
+            src={vehicleImages[formData.vehicle]}
+            alt={formData.vehicle === 'berline' ? (lang === 'fr' ? 'Berline Affaires' : 'Business Sedan') : (lang === 'fr' ? 'Van Prestige' : 'Prestige Van')}
+            className="h-32 w-auto object-contain rounded-2xl shadow-lg mb-2 border border-[#0b1d3a]/10 bg-white"
+            style={{ maxWidth: 180 }}
+          />
+          <span className="text-base font-semibold text-[#0b1d3a] mb-2">
+            {formData.vehicle === 'berline' ? (lang === 'fr' ? 'Berline Affaires' : 'Business Sedan') : (lang === 'fr' ? 'Van Prestige' : 'Prestige Van')}
+          </span>
+        </div>
+        <div className="flex mb-6 gap-2 justify-center">
+          {vehicleOptions.map(type => {
+            const isBerline = type.key === 'berline';
+            const tooManyForBerline = isBerline && parseInt(formData.passengers) > 3;
+            return (
+              <button
+                key={type.key}
+                type="button"
+                onClick={() => !tooManyForBerline && setFormData(prev => ({ ...prev, vehicle: type.key }))}
+                className={`flex items-center gap-2 px-6 py-2 rounded-full font-medium transition-all duration-150 border-2 text-base shadow-sm \
+                  ${formData.vehicle === type.key
+                    ? 'bg-[#0b1d3a] text-white border-[#0b1d3a] shadow-lg'
+                    : 'bg-white text-[#0b1d3a] border-[#0b1d3a] hover:bg-[#1b2a46] hover:text-white'} \
+                  ${tooManyForBerline ? 'opacity-50 cursor-not-allowed' : ''}`}
+                disabled={tooManyForBerline}
+                title={tooManyForBerline ? (lang === 'fr' ? 'Maximum 3 passagers en berline' : 'Maximum 3 passengers in sedan') : ''}
+              >
+                {type.label[lang]}
+              </button>
+            );
+          })}
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 mb-1 font-semibold flex items-center gap-2">
+            {lang === 'fr' ? 'Nombre de passagers' : 'Number of passengers'}
+          </label>
+          <select
+            name="passengers"
+            value={formData.passengers}
+            onChange={handlePassengersChange}
+            required
+            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#0b1d3a] focus:outline-none appearance-none bg-white text-gray-900 text-base pr-10"
+          >
+            {passengerOptions.map(opt => (
+              <option key={opt} value={opt}>{opt}</option>
+            ))}
+          </select>
+        </div>
+        <div className="mb-6 flex items-center gap-4">
+          {formData.from && formData.to && formData.passengers && formData.vehicle ? (
+            <>
+              <span className="text-lg font-semibold text-[#0b1d3a]">
+                {lang === 'fr' ? 'Estimation :' : 'Estimate:'}
+              </span>
+              <span className="text-xl font-bold">
+                {getEstimate()}
+              </span>
+              {(formData.vehicle === 'berline' && parseInt(formData.passengers) > 4) && (
+                <span className="text-red-600 text-sm font-medium">{lang === 'fr' ? 'Non disponible en berline' : 'Not available in sedan'}</span>
+              )}
+              {(formData.vehicle === 'van' && parseInt(formData.passengers) > 8) && (
+                <span className="text-red-600 text-sm font-medium">{lang === 'fr' ? 'Sur devis, contactez-nous' : 'On request, contact us'}</span>
+              )}
+            </>
+          ) : (
+            <span className="text-gray-500 text-base font-medium">{lang === 'fr' ? 'Complétez le formulaire pour obtenir une estimation.' : 'Complete the form to get an estimate.'}</span>
+          )}
+        </div>
         <button
           type="submit"
-          className="w-full py-3 rounded-full bg-[#0b1d3a] text-white font-bold text-lg shadow-lg hover:bg-[#1b2a46] transition-all duration-200 mt-4"
+          className={`w-full py-3 rounded-full bg-[#0b1d3a] text-white font-bold text-lg shadow-lg hover:bg-[#1b2a46] transition-all duration-200 mt-4 \
+            ${(formData.vehicle === 'berline' && parseInt(formData.passengers) > 4) || (formData.vehicle === 'van' && parseInt(formData.passengers) > 8) ? 'opacity-50 cursor-not-allowed' : ''}`}
+          disabled={(formData.vehicle === 'berline' && parseInt(formData.passengers) > 4) || (formData.vehicle === 'van' && parseInt(formData.passengers) > 8)}
         >
           {lang === 'fr' ? 'Estimation' : 'Get Estimate'}
         </button>
       </form>
+      <div className="mt-8 bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-300 rounded-xl p-4 text-center text-[#0b1d3a] font-medium shadow-md">
+        {lang === 'fr'
+          ? "Nous acceptons généralement les réservations jusqu'à 12h avant le transfert. Pour une demande urgente, contactez notre service client au +33 7 81 82 21 63."
+          : "We can generally accept all bookings up to 12 hours before your transfer. For late booking please contact our customer service +33 7 81 82 21 63."}
+      </div>
     </div>
   );
 } 
