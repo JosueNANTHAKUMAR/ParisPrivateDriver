@@ -5,8 +5,8 @@
       "en": "Your Private Driver in Paris"
     },
     "subtitle": {
-      "fr": "Transferts haut de gamme vers Disneyland, aéroports, city tours",
-      "en": "Premium transfers to Disneyland, airports, city tours"
+      "fr": "Transferts haut de gamme vers Aéroports, Disneyland, City tours",
+      "en": "Premium transfers to Airports, Disneyland, city tours"
     },
     "cta": {
       "fr": "Réserver maintenant",
@@ -247,6 +247,91 @@
       "name": {
         "fr": "Tour Eiffel",
         "en": "Eiffel Tower"
+      }
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "icon": "UserGroupIcon",
+      "title": { "fr": "Meilleure sélection de véhicules", "en": "Best selection of vehicles" },
+      "desc": {
+        "fr": "Des véhicules haut de gamme, récents et parfaitement entretenus.",
+        "en": "High-end, recent and perfectly maintained vehicles."
+      }
+    },
+    {
+      "icon": "PhoneIcon",
+      "title": { "fr": "Commande 24h/24 et 7j/7", "en": "24/7 Booking" },
+      "desc": {
+        "fr": "Réservez à tout moment, notre équipe est disponible en continu.",
+        "en": "Book anytime, our team is available 24/7."
+      }
+    },
+    {
+      "icon": "ClockIcon",
+      "title": { "fr": "Service à l'heure ou à la demande", "en": "Hourly or On-demand Service" },
+      "desc": {
+        "fr": "Flexibilité totale pour vos transferts ou mises à disposition.",
+        "en": "Total flexibility for your transfers or hourly bookings."
+      }
+    },
+    {
+      "icon": "SparklesIcon",
+      "title": { "fr": "Sièges bébé gratuits", "en": "Free baby seats" },
+      "desc": {
+        "fr": "Voyagez en famille en toute sécurité, sans supplément.",
+        "en": "Travel with your family safely, at no extra cost."
+      }
+    },
+    {
+      "icon": "UserIcon",
+      "title": { "fr": "Chauffeurs pros & discrets", "en": "Professional & discreet drivers" },
+      "desc": {
+        "fr": "Des professionnels expérimentés, élégants et ponctuels.",
+        "en": "Experienced, elegant and punctual professionals."
+      }
+    },
+    {
+      "icon": "CurrencyEuroIcon",
+      "title": { "fr": "Prix raisonnable & transparent", "en": "Reasonable & transparent pricing" },
+      "desc": {
+        "fr": "Aucune surprise, tout est clair dès la réservation.",
+        "en": "No surprises, everything is clear from booking."
+      }
+    }
+  ],
+  "fleetTitle": { "fr": "Nos véhicules d'exception", "en": "Our Premium Vehicles" },
+  "fleet": [
+    {
+      "image": "/ParisPrivateDriver/img/1.webp",
+      "title": { "fr": "Berline Confort", "en": "Comfort Sedan" },
+      "desc": {
+        "fr": "Voyagez sereinement à bord de notre berline confortable, idéale pour vos trajets quotidiens et transferts urbains.",
+        "en": "Travel with peace of mind in our comfortable sedan, perfect for daily rides and city transfers."
+      }
+    },
+    {
+      "image": "/ParisPrivateDriver/img/2.webp",
+      "title": { "fr": "Berline Affaires", "en": "Business Sedan" },
+      "desc": {
+        "fr": "Profitez d'un service haut de gamme avec notre berline affaires, alliant élégance, discrétion et performance pour vos déplacements professionnels.",
+        "en": "Enjoy a premium experience with our business sedan, combining elegance, discretion, and performance for your corporate travels."
+      }
+    },
+    {
+      "image": "/ParisPrivateDriver/img/3.webp",
+      "title": { "fr": "Van Confort", "en": "Comfort Van" },
+      "desc": {
+        "fr": "Idéal pour les familles ou petits groupes, notre van offre espace, confort et flexibilité pour tous vos transferts.",
+        "en": "Ideal for families or small groups, our van provides space, comfort, and flexibility for all your transfers."
+      }
+    },
+    {
+      "image": "/ParisPrivateDriver/img/4.webp",
+      "title": { "fr": "Van Prestige", "en": "Prestige Van" },
+      "desc": {
+        "fr": "Découvrez le summum du transport de groupe avec notre van prestige, parfait pour les événements, séminaires ou voyages d'affaires en toute sérénité.",
+        "en": "Experience the ultimate in group transportation with our prestige van, perfect for events, seminars, or business trips in total serenity."
       }
     }
   ]
